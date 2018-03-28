@@ -1,0 +1,16 @@
+$menu-text-color: white;
+
+$header-text-color: white;
+@mixin header-background() {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; 
+    background-blend-mode: multiply,multiply;
+}
+@mixin blur($px: 0) {
+    -webkit-filter: blur(#{$px}px) !important;
+    -ms-filter: blur(#{$px}px) !important;
+    -moz-filter: blur(#{$px}px) !important;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'blur\'><feGaussianBlur stdDeviation=\'#{$px}\' /></filter></svg>#blur");
+    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='#{$px}');
+}
+
+$slider-top: 200px;
